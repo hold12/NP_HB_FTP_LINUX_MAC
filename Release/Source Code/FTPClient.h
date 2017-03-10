@@ -24,7 +24,7 @@ class FTPClient
         void sendMsg(char *message, unsigned int buffersize);
         void downloadFile(char *filename);
         char* receiveMsg();
-        char* retrieveFile();
+        char* retriveFile();
         unsigned int calcNewPort(int a, int b);
         int getClient();
     private:

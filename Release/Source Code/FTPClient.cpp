@@ -38,7 +38,7 @@ char* FTPClient::receiveMsg()
     return bufferPointer;
 }
 
-char* FTPClient::retrieveFile()
+char* FTPClient::retriveFile()
 {
     buffer[recv(getClient(), buffer, buffersize, 0)] = '\0';
     char *bufferPointer = buffer;
@@ -56,7 +56,7 @@ void FTPClient::sendMsg(char message[], unsigned int buffersize)
     }
     else
     {
-        cout << "Send message:\t\t\t" << message;
+        cout << "Send message:\t\t\t\t" << message;
     }
 }
 
@@ -76,6 +76,6 @@ void FTPClient::downloadFile(char *filename)
     ofstream myfile;
 
     myfile.open(filename);
-    myfile << retrieveFile();
+    myfile << retriveFile();
     myfile.close();
 }
